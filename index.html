@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>提示词学校 · 一步一步学会和 AI 说话</title>
+<meta name="description" content="提示词学校：10 节循序渐进的课程，把写 AI 提示词的方法拆成可照抄的步骤。学会让 AI 先提问再做项目、先出方案再动手、把输出格式写死，并配套模板库与提示词体检器。">
+<meta name="theme-color" content="#5b5bd6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%235b5bd6'/%3E%3Ctext x='32' y='45' font-size='38' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='white'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="打开课程目录" aria-expanded="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="#/">
+    <span class="brand-mark" aria-hidden="true">P</span>
+    <span class="brand-text">提示词学校<em>Prompt School</em></span>
+  </a>
+  <nav class="topnav" aria-label="主导航">
+    <a href="#/" data-nav="/">首页</a>
+    <a href="#/templates" data-nav="/templates">模板库</a>
+    <a href="#/cheatsheet" data-nav="/cheatsheet">技巧速查</a>
+    <a href="#/playground" data-nav="/playground">工作台</a>
+  </nav>
+  <div class="topbar-right">
+    <a class="progress-pill" href="#/" id="progressPill" title="学习进度">
+      <span class="ring" id="progressRing" style="--p:0"><b id="progressPct">0%</b></span>
+      <span class="progress-label">学习进度</span>
+    </a>
+    <button class="icon-btn" id="themeBtn" aria-label="切换深色模式" title="切换深色模式">
+      <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+    </button>
+  </div>
+  <div class="progress-bar-mobile" aria-hidden="true"><i id="progressBarMobile" style="width:0%"></i></div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar" aria-label="课程目录">
+    <div class="sidebar-inner">
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+        <input type="search" id="lessonSearch" placeholder="搜索课程…" aria-label="搜索课程">
+      </label>
+      <nav class="lesson-nav" id="lessonNav"></nav>
+      <div class="sidebar-foot">
+        <a class="side-link" href="#/templates">提示词模板库</a>
+        <a class="side-link" href="#/cheatsheet">技巧速查表</a>
+        <a class="side-link" href="#/glossary">术语表</a>
+        <button class="side-link as-button" id="resetProgress" type="button">清空学习进度</button>
+      </div>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+
+  <main id="main" tabindex="-1"></main>
+</div>
+
+<footer class="site-foot">
+  <p><strong>提示词学校</strong> · 纯本地静态页面，不上传任何数据，学习进度只存在你的浏览器里。</p>
+  <p class="dim">核心主张：与其背咒语，不如把需求说清楚，并且先让 AI 问你问题。</p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/data-lessons-a.js"></script>
+<script src="assets/js/data-lessons-b.js"></script>
+<script src="assets/js/data-extra.js"></script>
+<script src="assets/js/checker.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

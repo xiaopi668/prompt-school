@@ -1,0 +1,9 @@
+# 由 node tools/verify.mjs --shots 生成的 PNG（仓库里只保留压缩后的 jpg）
+screenshots/*.png
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
